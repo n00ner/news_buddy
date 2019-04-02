@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/theme_add_tag"
+        android:icon="@drawable/ic_label"
+        app:showAsAction="always"
+        android:iconTint="#99000000"
+        android:title="@string/menu_theme_add_tag"/>
+
+    <item
+        android:id="@+id/theme_edit"
+        android:icon="@drawable/ic_edit"
+        app:showAsAction="always"
+        android:iconTint="#99000000"
+        android:title="@string/menu_theme_edit"/>
+
+    <item
+        android:id="@+id/theme_delete"
+        android:icon="@drawable/ic_delete"
+        app:showAsAction="always"
+        android:iconTint="#99FF0000"
+        android:title="@string/menu_theme_delete"/>
+</menu>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/empty_list_wrapper"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        tools:text="button"
+        android:visibility="gone"
+        android:textSize="14sp"
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="normal"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="64dp"
+        android:letterSpacing="0.09"
+        android:lineSpacingExtra="2sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:id="@+id/btn_empty_list_action"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_empty_list_action"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:alpha="0.5"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/ic_book"/>
+        <TextView
+            android:text="Title Text"
+            android:id="@+id/empty_list_title"
+            android:layout_marginTop="24dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_medium"
+            android:textStyle="normal"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:letterSpacing="0.17"
+            android:textAlignment="center"
+            android:lineSpacingExtra="4sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            tools:text="Subtitle Text"
+            android:textSize="14sp"
+            android:fontFamily="@font/roboto_regular"
+            android:textStyle="normal"
+            android:textColor="#99000000"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.02"
+            android:textAlignment="center"
+            android:lineSpacingExtra="6sp"
+            android:id="@+id/empty_list_subtitle"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,6 +1,45 @@
 <resources>
     <string name="app_name">News Buddy</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="menu_title_labels">Темы</string>
+    <string name="menu_title_feed">Лента</string>
+    <string name="menu_title_bookmark">Закладки</string>
+    <string name="btn_themes_add_tag">Добавить новый тэг</string>
+    <string name="text_themes_empty_title">Нет тем</string>
+    <string name="text_themes_empty_subtitle">Нажмите «+» для создания темы</string>
+    <string name="menu_theme_delete">Удалить тему</string>
+    <string name="menu_theme_edit">Редактировать тему</string>
+    <string name="success_theme_delete">Тема удалена</string>
+    <string name="success_theme_add">Тема добавлена</string>
+    <string name="success_theme_update">Тема обновлена</string>
+    <string name="error_theme_delete">Не удалось удалить тему</string>
+    <string name="error_theme_add">Не удалось добавить тему</string>
+    <string name="error_theme_update">Не удалось обновить тему</string>
+    <string name="dialog_decline_add_theme">Отмена</string>
+    <string name="dialog_add_theme">Добавить</string>
+    <string name="dialog_add_theme_title">Добавить новую тему</string>
+    <string name="hint_add_theme">Введите название темы</string>
+    <string name="warn_empty_add_theme">Пожайлуста, введите название темы</string>
+    <string name="warn_empty_add_tag">Пожайлуста, введите название тэга</string>
+    <string name="text_empty_tag_list">Нет тегов.\nИспользуйте контекстное меню для добавления тегов.</string>
+    <string name="menu_theme_add_tag">Добавить тэг</string>
+    <string name="dialog_edit_theme_title">Изменить тему</string>
+    <string name="dialog_edit_theme">Сохранить</string>
+    <string name="dialog_decline_edit_theme">Отмена</string>
+    <string name="dialog_add_tag_title">Добавить новый тэг</string>
+    <string name="dialog_decline_add_tag">Отмена</string>
+    <string name="dialog_add_tag">Добавить</string>
+    <string name="hint_add_tag">Введите название тэга</string>
+
+    <string name="success_tag_delete">Тэг удален</string>
+    <string name="success_tag_add">Тэг добавлен</string>
+    <string name="success_tag_update">Тэг обновлен</string>
+    <string name="error_tag_delete">Не удалось удалить тэг</string>
+    <string name="error_tag_add">Не удалось добавить тэг</string>
+    <string name="error_tag_update">Не удалось обновить тэг</string>
+
+    <string name="dialog_edit_tag_title">Изменить тэг</string>
+    <string name="dialog_edit_tag">Сохранить</string>
+    <string name="dialog_decline_edit_tag">Отмена</string>
+    <string name="text_open_in_web">Открыть в браузере</string>
+    <string name="text_add_to_bookmark">Добавить в закладки</string>
 </resources>

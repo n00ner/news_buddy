@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            tools:text="TextView"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="@font/roboto_medium"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"
+            android:letterSpacing="0.01"
+            android:layout_marginEnd="56dp"
+            android:ellipsize="end"
+            android:lineSpacingExtra="8sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/themes_section_header_text" />
+
+        <ImageView
+            android:id="@+id/img_theme_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="8dp"
+            app:srcCompat="@drawable/ic_more_vert" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:background="#33000000" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/empty_tag_list"
+        android:layout_width="match_parent"
+        android:layout_height="96dp">
+        <TextView
+            android:text="@string/text_empty_tag_list"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto_regular"
+            android:textStyle="normal"
+            android:textColor="#99000000"
+            android:layout_marginTop="8dp"
+            android:letterSpacing="0.02"
+            android:textAlignment="center"
+            android:lineSpacingExtra="6sp"
+            android:layout_centerInParent="true"
+            android:id="@+id/empty_list_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/tags_list"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

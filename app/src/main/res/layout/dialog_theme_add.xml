@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/dialog_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:text="@string/dialog_add_theme_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:textSize="16sp"
+        android:fontFamily="@font/roboto_regular"
+        android:textStyle="normal"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
+        android:textColor="#de000000"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" android:id="@+id/textView3"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+        android:hint="@string/hint_add_theme" app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:id="@+id/link_video_layout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:maxLines="2"
+            android:inputType="textMultiLine"
+            android:layout_height="wrap_content"
+            android:id="@+id/theme_name_edit"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" app:layout_constraintTop_toBottomOf="@+id/link_video_layout"
+        app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp" android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp" app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+            android:id="@+id/btn_decline_add_theme"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_medium"
+            android:gravity="center_horizontal"
+            android:letterSpacing="0.09"
+            android:lineSpacingExtra="2sp"
+            android:padding="8dp"
+            android:text="@string/dialog_decline_add_theme"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+
+            android:textSize="14sp"
+            android:textStyle="normal" />
+        <TextView
+
+            android:text="@string/dialog_add_theme"
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:textAllCaps="true"
+            android:fontFamily="@font/roboto_medium"
+            android:textStyle="normal"
+            android:textColor="@color/colorPrimary"
+            android:letterSpacing="0.09"
+            android:lineSpacingExtra="2sp"
+            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/btn_submit_add_theme"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
