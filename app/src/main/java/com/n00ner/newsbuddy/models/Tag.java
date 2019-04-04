@@ -1,5 +1,7 @@
 package com.n00ner.newsbuddy.models;
 
+import androidx.annotation.Nullable;
+
 public class Tag {
     private String id;
     private String name;
@@ -33,5 +35,27 @@ public class Tag {
 
     public void setThemeId(String themeId) {
         this.themeId = themeId;
+    }
+
+    @Override
+    public boolean equals(@Nullable Object obj) {
+        if(obj == null){
+            return false;
+        }
+        if(obj == this){
+            return true;
+        }
+
+        if(!(obj instanceof Tag)){
+            return false;
+        }
+
+        Tag o = (Tag)obj;
+
+        if(this.getThemeId().equals(o.getThemeId()) && this.id.equals(o.id) && this.name.equals(o.name)){
+            return true;
+        }else {
+            return false;
+        }
     }
 }

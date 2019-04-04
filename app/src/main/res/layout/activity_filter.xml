@@ -10,25 +10,24 @@
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_height="match_parent">
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:overScrollMode="never"
-                android:scrollbars="none"
-                android:layout_height="match_parent"
-                android:id="@+id/themes_list"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_height="match_parent"
+            android:id="@+id/filter_list"/>
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_end_filter_action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/colorPrimary"
-            app:tint="@color/white"
-            app:fabSize="normal"
+            app:fabText="@string/fab_go_to_feed"
             android:layout_marginBottom="16dp"
-            android:layout_gravity="bottom|end"
-            android:layout_marginEnd="16dp"
-            app:srcCompat="@drawable/ic_add"
-            android:id="@+id/fab_add_theme"/>
+            app:fabIcon="@drawable/ic_receipt"
+            app:fabTextAllCaps="true"
+            app:fontFamily="@font/roboto_medium"
+            android:layout_gravity="bottom|center" />
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     <include layout="@layout/view_empty_list"/>

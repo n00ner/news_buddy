@@ -8,6 +8,10 @@ public class Constants {
 
     /* Themes */
 
+    public static final int ACTIVITY_FILTER_PICKED = 1564;
+    public static final String BROWSER_LINK = "browse";
+    public static final String BROWSER_LABEL = "browse_label";
+
     public static final String TABLE_THEMES = "themes";
     public static final String COL_THEMES_ID = "theme_id";
     public static final String COL_THEMES_NAME = "theme_name";

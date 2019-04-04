@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/theme_add_tag"
-        android:icon="@drawable/ic_label"
+        android:icon="@drawable/ic_local_offer"
         app:showAsAction="always"
         android:iconTint="#99000000"
         android:title="@string/menu_theme_add_tag"/>

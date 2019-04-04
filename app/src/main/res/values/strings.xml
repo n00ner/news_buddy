@@ -3,6 +3,7 @@
     <string name="menu_title_labels">Темы</string>
     <string name="menu_title_feed">Лента</string>
     <string name="menu_title_bookmark">Закладки</string>
+    <string name="filter_title">Фильтр</string>
     <string name="btn_themes_add_tag">Добавить новый тэг</string>
     <string name="text_themes_empty_title">Нет тем</string>
     <string name="text_themes_empty_subtitle">Нажмите «+» для создания темы</string>
@@ -42,4 +43,17 @@
     <string name="dialog_decline_edit_tag">Отмена</string>
     <string name="text_open_in_web">Открыть в браузере</string>
     <string name="text_add_to_bookmark">Добавить в закладки</string>
+    <string name="fab_go_to_feed">Перейти к ленте</string>
+    <string name="empty_tag_filter">нет тэгов</string>
+    <string name="empty_tag_filter_sub">Добавьте хотя бы один тэг</string>
+    <string name="share_via">Отправить личное сообщение</string>
+    <string name="share_more_link">\n\nПодробнее: %s</string>
+    <string name="shared_from">\n\nОтправлено из %s</string>
+
+    <string name="empty_picked_tags">Тэги не выбраны</string>
+    <string name="empty_picked_tags_sub">Выберите хотя бы один тэг</string>
+    <string name="empty_news">нет новостей</string>
+    <string name="empty_news_sub">По данным тэгам новости не найдены</string>
+    <string name="error_network">Что-то пошло не так</string>
+    <string name="error_network_sub">Проверьте настройки интернет соединения</string>
 </resources>

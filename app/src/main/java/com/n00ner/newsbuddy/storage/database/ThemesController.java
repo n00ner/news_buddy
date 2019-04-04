@@ -6,9 +6,11 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.n00ner.newsbuddy.BaseApp;
 import com.n00ner.newsbuddy.Constants;
+import com.n00ner.newsbuddy.models.Tag;
 import com.n00ner.newsbuddy.models.Theme;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class ThemesController {
 
@@ -60,5 +62,30 @@ public class ThemesController {
             }catch (Exception exception){}
         }
         return themes;
+    }
+
+    public Theme getThemeByTag(Tag tag){
+       ArrayList<Theme> themes = fetchThemes();
+       if(!themes.contains(tag.getThemeId())){
+           return null;
+       }
+       for(Theme theme : themes){
+           if(theme.getId().equals(tag.getThemeId())){
+               return theme;
+           }
+       }
+       return null;
+    }
+
+    public HashMap<String, String> getMappedThemes(){
+        HashMap<String, String> mapThemes = new HashMap<>();
+        ArrayList<Theme> themes = fetchThemes();
+        for(Theme theme : themes){
+           ArrayList<Tag> tags = new TagsController().fetchTagsByThemeId(theme.getId());
+           for(Tag tag : tags){
+               mapThemes.put(tag.getName(), theme.getName());
+           }
+        }
+        return mapThemes;
     }
 }

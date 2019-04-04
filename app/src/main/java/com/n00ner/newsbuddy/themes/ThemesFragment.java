@@ -62,6 +62,20 @@ public class ThemesFragment extends Fragment implements ThemesView {
                 presenter.onAddThemeClicked();
             }
         });
+        themesList.addOnScrollListener(new RecyclerView.OnScrollListener(){
+            @Override
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy){
+                if (dy<0 && !fabAddTheme.isShown())
+                    fabAddTheme.show();
+                else if(dy>0 && fabAddTheme.isShown())
+                    fabAddTheme.hide();
+            }
+
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+            }
+        });
     }
 
     @Override
