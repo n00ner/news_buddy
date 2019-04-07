@@ -9,6 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
+        android:id="@+id/news_wrapper"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:elevation="1dp"
@@ -20,103 +21,66 @@
             android:layout_margin="16dp">
 
 
-            <TextView
-                android:id="@+id/news_title"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:minLines="1"
-                android:fontFamily="@font/roboto_light"
-                android:text="Title goes here"
-                android:textColor="#de000000"
-                android:textSize="18sp"
-                app:layout_constraintEnd_toStartOf="@+id/img_news_preview"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/news_description"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:ellipsize="end"
-                android:fontFamily="@font/roboto_regular"
-                android:maxLines="6"
-                android:minLines="3"
-                android:text="TextView"
-                android:textSize="12sp"
-                app:layout_constraintEnd_toStartOf="@+id/img_news_preview"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/news_title" />
-
             <ImageView
                 android:id="@+id/img_news_preview"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/news_description"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@mipmap/ic_launcher" />
 
-            <ImageView
-                android:id="@+id/news_share"
-                android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:tint="#767676"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/roboto_light"
+                android:maxLines="1"
+                android:minLines="1"
+                tools:text="TextView"
+                android:textColor="#de000000"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/news_description"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/ic_share" />
-
-            <ImageView
-                android:id="@+id/news_bookmark"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:tint="#767676"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/news_share"
-                app:layout_constraintTop_toBottomOf="@+id/news_description"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/ic_collections_bookmark" />
-
-            <ImageView
-                android:id="@+id/news_open_browser"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:tint="#767676"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/news_bookmark"
-                app:layout_constraintTop_toBottomOf="@+id/news_description"
-                app:layout_constraintVertical_bias="1.0"
-                app:srcCompat="@drawable/ic_open_in_browser" />
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/img_news_preview"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/news_pub_source"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginStart="8dp"
                 android:text="TextView"
-                android:minLines="1"
-                android:maxLines="1"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/news_open_browser"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/news_description"
-                app:layout_constraintVertical_bias="1.0" />
+                android:textSize="10sp"
+                android:textColor="#0000ff"
+                app:layout_constraintStart_toEndOf="@+id/img_news_preview"
+                app:layout_constraintTop_toBottomOf="@+id/news_title" />
 
+            <TextView
+                android:id="@+id/news_pub_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toTopOf="@+id/news_description"
+                app:layout_constraintStart_toEndOf="@+id/news_pub_source"
+                app:layout_constraintTop_toBottomOf="@+id/news_title"
+                tools:text="TextView" />
+
+            <TextView
+                android:id="@+id/news_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                tools:text="TextView"
+                android:textSize="12sp"
+                android:minLines="1"
+                android:maxLines="5"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/img_news_preview"
+                app:layout_constraintTop_toBottomOf="@+id/news_pub_source"
+                app:layout_constraintVertical_bias="0.0" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>

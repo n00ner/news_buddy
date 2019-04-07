@@ -6,8 +6,8 @@ android {
         applicationId "com.n00ner.newsbuddy"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -51,4 +51,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.2'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation "com.airbnb.android:lottie:3.0.0"
+    implementation 'org.jsoup:jsoup:1.11.3'
 }

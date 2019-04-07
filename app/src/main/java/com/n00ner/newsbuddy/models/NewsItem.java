@@ -1,5 +1,7 @@
 package com.n00ner.newsbuddy.models;
 
+import java.util.Date;
+
 public class NewsItem {
     private String title;
     private String link;
@@ -50,6 +52,10 @@ public class NewsItem {
 
     public String getDescription() {
         return description;
+    }
+
+    public long getPubDateInMillis(){
+        return new Date(this.pubDate).getTime();
     }
 
     public void setDescription(String description) {

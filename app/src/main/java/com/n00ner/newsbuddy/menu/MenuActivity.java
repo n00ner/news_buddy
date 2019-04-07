@@ -26,9 +26,6 @@ public class MenuActivity extends BaseActivity implements MenuView{
               case R.id.navigation_feed:
                     setFeed();
                     return true;
-                case R.id.navigation_favorite:
-                    setFavorite();
-                    return true;
                 case R.id.navigation_themes:
                     setThemes();
                     return true;

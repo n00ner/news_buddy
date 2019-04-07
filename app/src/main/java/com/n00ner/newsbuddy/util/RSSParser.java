@@ -6,23 +6,21 @@ import android.util.Xml;
 
 import com.n00ner.newsbuddy.models.NewsItem;
 
+import org.jsoup.Jsoup;
+import org.jsoup.select.Elements;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
-import org.xmlpull.v1.XmlPullParserFactory;
+
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.StringReader;
+
 import java.nio.charset.StandardCharsets;
-import java.text.SimpleDateFormat;
+
 import java.util.ArrayList;
-import java.util.Date;
+
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -55,7 +53,7 @@ public class RSSParser {
                 if(description != null)
                     item.setDescription(description.getFirstChild().getNodeValue());
                 if(pubDate != null){
-                    item.setPubDate(new SimpleDateFormat("EEE, MMM d, yyyy").format(new Date(pubDate.getFirstChild().getNodeValue())));
+                    item.setPubDate(pubDate.getFirstChild().getNodeValue());
                 }
                 if(link != null)
                     item.setLink(link.getFirstChild().getNodeValue());
@@ -68,6 +66,23 @@ public class RSSParser {
             }
         }
         return items;
+    }
+
+    public String fetchOGtag(String html) {
+        org.jsoup.nodes.Document document = Jsoup.parse(html);
+        Elements metaTags = document.select("meta");
+        String siteImgUrl = null;
+        for(org.jsoup.nodes.Element element: metaTags){
+            String name = element.attr("property");
+            String content = element.attr("content");
+            if(name != null && content != null){
+                if(name.equals("og:image")){
+                    siteImgUrl = content;
+                }
+
+            }
+        }
+        return siteImgUrl;
     }
 
 }
