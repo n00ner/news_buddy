@@ -75,6 +75,7 @@
                 android:layout_marginBottom="8dp"
                 tools:text="TextView"
                 android:textSize="12sp"
+
                 android:minLines="1"
                 android:maxLines="5"
                 app:layout_constraintBottom_toBottomOf="parent"

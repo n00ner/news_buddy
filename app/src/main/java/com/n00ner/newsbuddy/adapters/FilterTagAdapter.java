@@ -31,6 +31,11 @@ public class FilterTagAdapter extends RecyclerView.Adapter<TagCheckerHolder> {
         this.filterView = filterView;
     }
 
+    public FilterTagAdapter(FilterView filterView) {
+        this.items = new ArrayList<>();
+        this.filterView = filterView;
+    }
+
     @NonNull
     @Override
     public TagCheckerHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -41,6 +46,24 @@ public class FilterTagAdapter extends RecyclerView.Adapter<TagCheckerHolder> {
     public void setItems(ArrayList<Tag> data){
         items = data;
         notifyDataSetChanged();
+    }
+
+    public void addItems(ArrayList<Tag> data){
+        for(Tag tag: data){
+            if(!isTagContains(tag)){
+                items.add(tag);
+            }
+        }
+        notifyDataSetChanged();
+    }
+
+    private boolean isTagContains(Tag tag){
+        for(Tag added: items){
+            if(added.getName().equals(tag.getName())){
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override

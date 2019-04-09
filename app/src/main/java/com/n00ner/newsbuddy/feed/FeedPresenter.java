@@ -46,8 +46,15 @@ public class FeedPresenter implements FeedInteractor.OnFeedListener {
 
     public void requestNews(){
         ArrayList<String> pickedThemes = buildQueryThemes(new  AppPreferences().getPickedTagList());
+        ArrayList<String> allThemes = new ArrayList<>();
+        for(Theme theme: new ThemesController().fetchThemes()){
+            allThemes.add(theme.getName());
+        }
         if(pickedThemes.size() == 0){
-            feedView.showEmptyList(R.string.empty_news, R.string.empty_picked_tags_sub, R.drawable.ic_receipt);
+            pickedThemes = allThemes;
+        }
+        if(pickedThemes.size() == 0){
+            feedView.showEmptyList("НЕТ ТЭГОВ", "Выберите хотя бы один тэг", R.drawable.ic_local_offer);
             return;
         }
         feedView.showLoadAnimation();

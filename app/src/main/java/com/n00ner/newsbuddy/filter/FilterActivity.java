@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.n00ner.newsbuddy.R;
 import com.n00ner.newsbuddy.adapters.FilterAdapter;
+import com.n00ner.newsbuddy.adapters.FilterTagAdapter;
 import com.n00ner.newsbuddy.models.SectionTheme;
 import com.n00ner.newsbuddy.storage.AppPreferences;
 import com.robertlevonyan.views.customfloatingactionbutton.FloatingActionButton;
@@ -30,7 +31,7 @@ public class FilterActivity extends AppCompatActivity implements  FilterView {
     @BindView(R.id.empty_list_subtitle) TextView emptySubtitle;
     @BindView(R.id.img_empty_list_action) ImageView emptyIcon;
 
-    private FilterAdapter adapter;
+    private FilterTagAdapter adapter;
     private FilterPresenter presenter;
 
 
@@ -40,7 +41,7 @@ public class FilterActivity extends AppCompatActivity implements  FilterView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filter);
         ButterKnife.bind(this);
-        adapter = new FilterAdapter(this);
+        adapter = new FilterTagAdapter(this);
         presenter = new FilterPresenter(this);
         filterList.addOnScrollListener(new RecyclerView.OnScrollListener(){
             @Override
@@ -81,7 +82,9 @@ public class FilterActivity extends AppCompatActivity implements  FilterView {
 
     @Override
     public void updateList(ArrayList<SectionTheme> data) {
-        adapter.setItems(data);
+        for (SectionTheme theme : data){
+            adapter.addItems(theme.getTagList());
+        }
     }
 
     @Override

@@ -132,7 +132,7 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsHolder> {
         }
 
         if(items.get(position).getPubDate() != null){
-            holder.pubDate.setText(new SimpleDateFormat("d MMM yyyy").format(new Date(items.get(position).getPubDate())));
+            holder.pubDate.setText(new SimpleDateFormat("HH:mm - d MMM yyyy").format(new Date(items.get(position).getPubDate())));
         }
 
         if(items.get(position).getImageUrl() != null){
